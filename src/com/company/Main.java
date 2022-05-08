@@ -41,7 +41,13 @@ public class Main {
         });
 
         jButton2.addActionListener(e -> {
-            System.out.println("Нажата кнопка 2");
+            try {
+                Runtime.getRuntime().exec(new String[]{"calc"});
+                System.out.println("Нажата кнопка 2");
+            }
+            catch (Exception ex) {
+                    System.out.println(ex);
+                }
         });
     }
 }
